@@ -1,0 +1,270 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.parent-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.centered-div {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center
+}
+
+.take-space {
+  margin: top 2%;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.last-played {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transform: 50%;
+}
+
+.other-players-container {
+  right: 0;
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  display: flex;
+  flex-direction: column;
+  margin-right: 1%;
+  max-width: 30%;
+  min-width: 150px;
+  box-sizing: border-box;
+}
+
+.other-players-container-old {
+  right: 0;
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-right: 1%;
+  max-width: 30%;
+  min-width: 150px;
+  flex-direction: column;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.players-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.player {
+  display: inline-block;
+  width: calc(100% / 3 - 10px);
+  min-width: 150px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.skipped {
+  background-color:#aaa;
+}
+
+.current {
+  border: 3px #282c34 solid;
+}
+
+.players {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card.selected {
+  filter: brightness(70%);
+  transform: translateY(-5px);
+}
+
+.card:not(.selected) {
+  transform: translateY(5px);
+}
+
+.card:not(.selected):hover {
+  filter: brightness(90%);
+  transform: translateY(0px);
+  cursor: pointer;
+}
+
+.deck .card
+{
+    border: solid 1px #aaa;
+    border-radius: 9px;
+    width: 95px;
+    height: 150px;
+    float:left;
+    background-color: white;
+    padding: 3px 3px 3px 3px;
+    margin: 8px;
+    transition: filter 0.25s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.card2
+{
+    width: 50px;
+    padding: 10px;
+    border: solid 1px #808080;
+    background-color: white;
+    display: inline-block;
+    border-radius: 10px;
+    font-size: 22px;
+    text-align: center;
+    margin: 3px;
+    border:solid 3px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card .value{
+  font-size: 25px;
+  font-family:Arial; 
+}
+
+.card .suit
+{
+	background-image: url('https://www.thatsoftwaredude.com/images/post/0f631eeb-6c4a-4bfd-9f86-e0a08ae8584b.png');
+	height: 100px;
+	width: 90px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.qmark
+{
+	background-image: url('./assets/questionmark.png');
+	height: 100px;
+	width: 90px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.card .diamonds
+{
+	background-position-y: 100px;
+	background-position-x: 3px;
+}
+
+.card .hearts
+{
+	background-position-x: 91px;
+}
+
+.card .clubs
+{
+	background-position-x:91px;
+	background-position-y:100px;
+}
+
+.card .spades
+{
+	background-position-x:5px;
+}
+
+.hand {
+  justify-content: center;
+  align-items: center;
+  margin: 5px auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 96%;
+  margin-bottom: 0.5%;
+}
+
+.player-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+
+.centered {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.centered-big {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 2%;
+  margin-left: 2%;
+}
